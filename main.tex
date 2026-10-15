@@ -1,0 +1,55 @@
+\documentclass[12pt,a4paper,oneside]{scrreprt}
+\usepackage{fontspec}
+\setmainfont{Latin Modern Roman}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{csquotes}
+\usepackage[backend=biber,style=numeric,sorting=none]{biblatex}
+\addbibresource{literatur.bib}
+\usepackage[hidelinks]{hyperref}
+\input{metadaten}
+\begin{document}
+\begin{titlepage}
+\centering
+{\Large HTBLuVA Salzburg\par}
+\vspace{2cm}
+{\huge\bfseries Diplomarbeit\par}
+\vspace{1cm}
+{\LARGE \Arbeitstitel\par}
+\vspace{2cm}
+{\large \Team\par}
+\vfill
+Betreuung: \Betreuung\par
+Schuljahr: \Schuljahr\par
+Abgabe: \Abgabedatum
+\end{titlepage}
+\pagenumbering{roman}
+\chapter*{Kurzfassung}
+\addcontentsline{toc}{chapter}{Kurzfassung}
+Hier Problem, Ziel, Vorgehen und Ergebnis kurz zusammenfassen.
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{bilder/Skizze_SchoolSIEM.jpg}
+  \caption{Skizze der Diplomarbeit}
+\label{fig:Skizze}
+\end{figure}
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+Write a short English summary here.
+\tableofcontents
+\clearpage
+\pagenumbering{arabic}
+\input{kapitel/01-einleitung}
+\input{kapitel/02-grundlagen}
+\input{kapitel/03-anforderungen}
+\input{kapitel/04-umsetzung-person-a}
+\input{kapitel/05-umsetzung-person-b}
+\input{kapitel/06-umsetzung-person-c}
+\input{kapitel/07-tests-evaluation}
+\input{kapitel/08-fazit}
+\printbibliography[heading=bibintoc,title={Literaturverzeichnis}]
+\appendix
+\input{kapitel/09-anhang}
+\end{document}
+
