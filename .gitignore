@@ -99,4 +99,5 @@ Desktop.ini
 *.fls
 *.fdb_latexmk
 *.synctex.gz
+*.pdf
 build/
