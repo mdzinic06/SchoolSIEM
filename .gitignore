@@ -93,11 +93,17 @@ Desktop.ini
 *~
 
 *.aux
+*.bbl
+*.bcf
+*.blg
 *.log
-*.toc
 *.out
+*.run.xml
+*.toc
+*.lof
+*.lot
 *.fls
 *.fdb_latexmk
 *.synctex.gz
-*.pdf
-build/
+*.bcf-SAVE-ERROR
+main.pdf
