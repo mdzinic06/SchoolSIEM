@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SchoolSIEM - Live Dashboard</title>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>SchoolSIEM</h1>
+    <div>
+      <span>● System Live</span>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1. KPI-Leiste -->
+    <section aria-label="Kennzahlen">
+      <article>
+        <h2>Angriffe (24h)</h2>
+        <p>1.420</p>
+      </article>
+
+      <article>
+        <h2>Aktive Alerts</h2>
+        <p>3</p>
+      </article>
+
+      <article>
+        <h2>TOP - Zielport</h2>
+        <p>Port: 22 (SSH)</p>
+      </article>
+
+      <article>
+        <h2>TOP - Herkunftsland</h2>
+        <p>CHINA - CN</p>
+      </article>
+    </section>
+
+    <!-- 2. Hauptbereich: Weltkarte & Diagramme -->
+    <section aria-label="Visualisierungen">
+      <!-- Linke Spalte: Weltkarte -->
+      <div>
+        <h2>LIVE - Weltkarte</h2>
+        <div id="world-map">
+          <!-- Platzhalter für Leaflet-Karte / SVG -->
+          <p>[Interaktive Weltkarte]</p>
+        </div>
+      </div>
+
+      <!-- Rechte Spalte: Charts -->
+      <div>
+        <article>
+          <h2>Angriffe pro Stunde</h2>
+          <div id="attacks-per-hour-chart">
+            <!-- Platzhalter für Linien-Diagramm -->
+            <p>[Linien-Chart]</p>
+          </div>
+        </article>
+
+        <article>
+          <h2>Meistattackierte Ports</h2>
+          <ul>
+            <li>
+              <span>Port 22 (SSH)</span>
+              <progress value="85" max="100">85%</progress>
+            </li>
+            <li>
+              <span>Port 23 (Telnet)</span>
+              <progress value="55" max="100">55%</progress>
+            </li>
+            <li>
+              <span>Port 80 (HTTP)</span>
+              <progress value="30" max="100">30%</progress>
+            </li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- 3. Unterer Bereich: Live-Angriffs-Feed -->
+    <section aria-label="Live-Angriffs-Feed">
+      <h2>LIVE-Angriffs-Feed</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Zeitstempel</th>
+            <th>Quell-IP</th>
+            <th>Herkunft</th>
+            <th>Zielport</th>
+            <th>Angriffsart (MITRE)</th>
+            <th>Schweregrad</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>14:08:12</td>
+            <td>185.220.101.4</td>
+            <td>DE (Frankfurt)</td>
+            <td>22 (SSH)</td>
+            <td>SSH Brute-Force (T1110)</td>
+            <td>Hoch</td>
+          </tr>
+          <tr>
+            <td>14:07:59</td>
+            <td>45.133.1.92</td>
+            <td>RU (Moskau)</td>
+            <td>23 (Telnet)</td>
+            <td>Credential Stuffing</td>
+            <td>Mittel</td>
+          </tr>
+          <tr>
+            <td>14:07:41</td>
+            <td>103.145.12.8</td>
+            <td>CN (Peking)</td>
+            <td>22 (SSH)</td>
+            <td>Port Scan (T1046)</td>
+            <td>Niedrig</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+</body>
+</html>
